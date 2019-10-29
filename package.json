@@ -1,0 +1,13 @@
+{
+ "name": "outside-cli",
+ "version": "1.0.0",
+ "license": "MIT",
+ "bin": {
+  "outside": "./cli.js"
+ },
+ "scripts": {},
+ "devDependencies": {},
+ "dependencies": {
+  "minimist": "^1.2.0"
+ }
+}
