@@ -8,7 +8,10 @@ module.exports = async (location, apiType, zip) => {
 			? 'https://api.openweathermap.org/data/2.5/weather'
 			: 'https://api.openweathermap.org/data/2.5/forecast';
 
-	let params = { appid: weatherApiKey };
+	let params = {
+		appid: weatherApiKey,
+		units: 'imperial',
+	};
 	if ((location && zip) || zip) {
 		params.zip = zip;
 	}
@@ -21,6 +24,8 @@ module.exports = async (location, apiType, zip) => {
 		url: apiCall,
 		params,
 	});
+
+	console.log(results.data);
 
 	return results.data;
 };

@@ -1,11 +1,10 @@
 {
- "name": "outside-cli",
+ "name": "weather-cli",
  "version": "1.0.0",
  "description": "A CLI app that gives you the weather forecast",
- "homepage": "https://github.com/bflores88/outside-cli#readme",
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/bflores88/outside-cli.git"
+  "url": "git+https://github.com/bflores88/weather-cli.git"
  },
  "engines": {
   "node": ">=8"
