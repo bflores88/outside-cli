@@ -3,17 +3,21 @@ const menus = {
  outside [commmand] <options>
 
  today ............. show weather for today
- forecast .......... show 10-day weather forecast
+ forecast .......... show 5-day weather forecast
  version ........... show package version
  help .............. show help menu for a command`,
 	today: `
  outside today <options>
  
- --location, -l .... the location to use`,
+ --location, -l .... the city location to use
+ --zip, -z ............. the zip code to use
+ --country, -cc..... the country code to use`,
 	forecast: `
  outside forecast <options>
  
- --location, -l .... the location to use`,
+ --location, -l .... the location to use
+ --zip, -z ............. the zip code to use
+ --country, -cc..... the country code to use`,
 };
 
 module.exports = (args) => {

@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
+const error = require('./utils/error');
 const minimist = require('minimist');
-
-console.log('Welcome to the outside!');
 
 const args = minimist(process.argv.slice(2));
 let cmd = args._[0] || 'help';
@@ -29,5 +27,5 @@ switch (cmd) {
 		require('./cmds/forecast')(args);
 		break;
 	default:
-		console.error(`"${cmd}" is not a valid command!`);
+		error(`"${cmd}" is not a valid command!`, true);
 }
