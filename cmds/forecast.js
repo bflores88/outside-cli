@@ -22,7 +22,7 @@ module.exports = async (args) => {
 		forecasts.forecasts.forEach((day) => {
 			console.log(`${day.date}  --  Low: ${day.low}° F  |  High: ${day.high}° F  |  ${day.description}`);
 		});
-		console.log(`\n \nNot the right location?  Enter 'outside help forecast' for more options.`);
+		console.log(`\n \nNot the right location?  Enter 'weather help forecast' for more options.`);
 	} catch (err) {
 		spinner.stop();
 		const errorMessage = `ERROR! -- ${err.response.data.message}`;

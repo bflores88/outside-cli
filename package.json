@@ -17,7 +17,7 @@
  "preferGlobal": true,
  "license": "MIT",
  "bin": {
-  "outside": "./cli.js"
+  "weather": "./cli.js"
  },
  "scripts": {},
  "devDependencies": {},

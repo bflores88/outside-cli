@@ -21,7 +21,7 @@ module.exports = async (args) => {
 
 		console.log(`\nCurrent conditions in ${weather.location}:\n`);
 		console.log(weather.temp);
-		console.log(`\n \nNot the right location?  Enter 'outside help today' for more options.`);
+		console.log(`\n \nNot the right location?  Enter 'weather help today' for more options.`);
 	} catch (err) {
 		spinner.stop();
 		const errorMessage = `ERROR! -- ${err.response.data.message}`;

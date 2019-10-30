@@ -1,4 +1,5 @@
 const getModes = require('./getModes');
+const getIcons = require('./weatherIcons');
 
 module.exports = (data) => {
 	if (data.main) {
@@ -10,7 +11,7 @@ module.exports = (data) => {
 
 function parseToday(data) {
 	const location = `${data.name}, ${data.sys.country}`;
-	const temp = `${data.main.temp}° F - ${data.weather[0].description}`;
+	const temp = `${data.main.temp}° F - ${getIcons(data.weather[0].description)}`;
 	const date = Date(data.dt * 1000);
 
 	return {
@@ -61,31 +62,7 @@ function parseForecast(data) {
 	forecasts.forEach((day) => {
 		day.description = getModes(day.description)
 			.map((des) => {
-				if (des.includes('rain')) {
-					return (des = `🌧  ${des}`);
-				}
-
-				if (des.includes('clear') || des.includes('sun')) {
-					return (des = `☀️  ${des}`);
-				}
-
-				if (des.includes('overcast')) {
-					return (des = `🌥  ${des}`);
-				}
-
-				if (des.includes('partly')) {
-					return (des = `🌤  ${des}`);
-				}
-
-				if (des.includes('cloud')) {
-					return (des = `☁️  ${des}`);
-				}
-
-				if (des.includes('snow')) {
-					return (des = `❄️  ${des}`);
-				}
-
-				return des;
+				return getIcons(des);
 			})
 			.join(' / ');
 	});
