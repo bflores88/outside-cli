@@ -2,9 +2,9 @@
 
 A CLI app that gives the current weather and a 5-day forecast built with Node and based on [outside-cli](https://timber.io/blog/creating-a-real-world-cli-app-with-node/).
 
-![current condition](./screenshots/today.png)
+![current condition](./screenshots/today.png 'current condition')
 
-## ![forecasted conditions](./screenshots/forecast.png)
+![forecasted conditions](./screenshots/forecast.png 'forecasted conditions')
 
 ## How to Use
 
