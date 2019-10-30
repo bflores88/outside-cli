@@ -6,6 +6,8 @@ A CLI app that gives the current weather and a 5-day forecast built with Node an
 
 ![forecasted conditions](./screenshots/forecast.png 'forecasted conditions')
 
+---
+
 ## How to Use
 
 1. Clone or download repository
