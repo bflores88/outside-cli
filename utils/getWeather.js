@@ -25,7 +25,5 @@ module.exports = async (location, apiType, zip) => {
 		params,
 	});
 
-	console.log(results.data);
-
 	return results.data;
 };
