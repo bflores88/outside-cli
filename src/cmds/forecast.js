@@ -1,10 +1,10 @@
-const ora = require('ora');
-const getWeather = require('../utils/getWeather');
-const parseWeather = require('../utils/parseWeather');
-const getLocation = require('../utils/location');
-const error = require('../utils/error');
+import ora from 'ora';
+import getWeather from '../utils/getWeather';
+import parseWeather from '../utils/parseWeather';
+import getLocation from '../utils/location';
+import error from '../utils/error';
 
-module.exports = async (args) => {
+const getForecast = async (args) => {
 	const spinner = ora().start();
 
 	try {
@@ -29,3 +29,5 @@ module.exports = async (args) => {
 		error(errorMessage, true);
 	}
 };
+
+export default getForecast;

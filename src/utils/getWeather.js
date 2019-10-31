@@ -1,8 +1,10 @@
-const axios = require('axios');
-require('dotenv').config();
+import axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv.config();
 const weatherApiKey = process.env.OPEN_WEATHER_API_KEY;
 
-module.exports = async (location, apiType, zip) => {
+const getWeather = async (location, apiType, zip) => {
 	const apiCall =
 		apiType === 'today'
 			? 'https://api.openweathermap.org/data/2.5/weather'
@@ -27,3 +29,5 @@ module.exports = async (location, apiType, zip) => {
 
 	return results.data;
 };
+
+export default getWeather;

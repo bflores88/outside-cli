@@ -1,4 +1,4 @@
-module.exports = (array) => {
+const getModes = (array) => {
 	const modes = [];
 	const counts = {};
 	let max = 0;
@@ -23,3 +23,5 @@ module.exports = (array) => {
 
 	return modes;
 };
+
+export default getModes;

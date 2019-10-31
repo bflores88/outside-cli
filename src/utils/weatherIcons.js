@@ -1,4 +1,4 @@
-module.exports = (condition) => {
+const getIcons = (condition) => {
 	if (condition.includes('rain') || condition.includes('mist')) {
 		return (condition = `🌧  ${condition}`);
 	}
@@ -29,3 +29,5 @@ module.exports = (condition) => {
 
 	return condition;
 };
+
+export default getIcons;

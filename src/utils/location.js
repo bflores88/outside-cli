@@ -1,6 +1,6 @@
-const axios = require('axios');
+import axios from 'axios';
 
-module.exports = async () => {
+const location = async () => {
 	const results = await axios({
 		method: 'get',
 		url: 'https://ipapi.co/json/',
@@ -9,3 +9,5 @@ module.exports = async () => {
 	const { postal, country } = results.data;
 	return `${postal},${country}`;
 };
+
+export default location;

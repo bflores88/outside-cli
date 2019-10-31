@@ -1,7 +1,7 @@
-const getModes = require('./getModes');
-const getIcons = require('./weatherIcons');
+import getModes from './getModes';
+import getIcons from './weatherIcons';
 
-module.exports = (data) => {
+const parseWeather = (data) => {
 	if (data.main) {
 		return parseToday(data);
 	} else {
@@ -72,3 +72,5 @@ function parseForecast(data) {
 		forecasts,
 	};
 }
+
+export default parseWeather;
